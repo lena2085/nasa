@@ -3,14 +3,16 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB8UdY_LtWdoJoO7pr9nPFM-iv2Wjn8gNk",
-  authDomain: "bloomsphere-838b1.firebaseapp.com",
-  projectId: "bloomsphere-838b1",
-  storageBucket: "bloomsphere-838b1.appspot.com",
-  messagingSenderId: "642304032609",
-  appId: "1:642304032609:web:5e2a356ed613915e8acf20",
-  measurementId: "G-ZGPND57JGD"
+  // Use Vercel Environment Variables here
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY, 
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID 
 };
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
+
