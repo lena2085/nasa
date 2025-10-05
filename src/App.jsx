@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import Reports from "./pages/Reports";
 import Alerts from "./pages/Alerts";
+import ReportFormPage from "./pages/ReportFormPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/reports" element={<Reports />} />
+              <Route path="/reports/new" element={<ReportFormPage />} />
               <Route path="/alerts" element={<Alerts />} />
             </Routes>
           </main>

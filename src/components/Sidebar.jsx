@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <aside className="w-60 bg-white/80 backdrop-blur-md shadow-lg border-r border-gray-200 h-screen fixed">
+    <aside className="w-60 bg-white/80 backdrop-blur-md shadow-lg border-r border-gray-200">
       <div className="px-6 py-4 text-lg font-semibold text-gray-700">
         Menu
       </div>

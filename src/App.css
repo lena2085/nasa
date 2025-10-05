@@ -1,0 +1,206 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@400;600&family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap');
+
+/* Fonts */
+.font-handwriting { font-family: 'Lucida Handwriting', cursive; }
+.font-dancing { font-family: 'Dancing Script', cursive; }
+.font-orbitron { font-family: 'Orbitron', sans-serif; }
+.font-exo { font-family: 'Exo 2', sans-serif; }
+.font-poppins { font-family: 'Poppins', sans-serif; }
+
+/* ------------------- */
+/* THEME VARIABLES (Light Only) */
+/* ------------------- */
+:root {
+  --bg-color: linear-gradient(135deg, #1c53b3, #000000);
+  --card-bg: rgba(255, 255, 255, 0.12);
+  --text-color: #ffffff;
+  --input-text-color: #0f4054;
+  --dropdown-color: #000000;
+  --button-bg: rgba(255, 255, 255, 0.15);
+  --button-color: #000000;
+}
+
+/* ------------------- */
+/* BODY & ROOT */
+/* ------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* ------------------- */
+/* INPUTS & TEXTAREAS */
+/* ------------------- */
+.glass-input {
+  width: 100%;
+  padding: 15px 1px;
+  border-radius: 1.1rem !important;
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background-color: var(--card-bg);
+  color: var(--input-text-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+.glass-input:focus {
+  border: 1px solid #00f0ff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.glass-input:-webkit-autofill,
+.glass-input:-webkit-autofill:focus {
+  border-radius: 1.5rem !important;
+  box-shadow: 0 0 0px 1000px var(--card-bg) inset !important;
+  -webkit-text-fill-color: var(--input-text-color) !important;
+}
+
+/* Dropdown text color */
+.glass-input select {
+  color: var(--dropdown-color);
+}
+
+/* ------------------- */
+/* LABELS */
+/* ------------------- */
+.glass-label {
+  font-family:"Lucida Handwriting", cursive;
+  font-weight: 600;
+  padding: 6px;
+  background: linear-gradient(90deg, #00f0ff, #0077ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: #badfe1;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 1.1rem;
+}
+
+/* ------------------- */
+/* BUTTONS */
+/* ------------------- */
+button {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(0,200,255,0.9);
+}
+
+.glass-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.28);
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.glass-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 40px rgba(0,200,255,0.12);
+  background-color: rgba(0,255,255,0.06);
+}
+
+.submit-btn { margin-top: 10px; margin-left: 10px; margin-bottom:20px; width: 220px; -webkit-text-fill-color:white; }
+.toggle-btn { margin-left: 10px; margin-bottom:20px; width: 150px; -webkit-text-fill-color: white;}
+
+
+@media (max-width:480px){
+  .submit-btn { width: 100%; }
+  .toggle-btn { width: calc(50% - 0.5rem); }
+}
+
+/* Ensure buttons do not wrap */
+.flex-wrap { flex-wrap: wrap; }
+
+/* ------------------- */
+/* GLASS CARD */
+/* ------------------- */
+.glass-card {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  padding: 0;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+/* ------------------- */
+/* HEADINGS */
+.text-gradient-cyan-blue {
+  background: linear-gradient(90deg, #00f0ff, #0077ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ------------------- */
+/* STAR BACKGROUND */
+.stars, .twinkling {
+  position: fixed;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  z-index: 0;
+  display: block;
+}
+
+.stars {
+  background: url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  background-size: cover;
+  animation: moveStars 290s linear infinite;
+  opacity: 100%;
+}
+
+.twinkling {
+  background: url("https://www.transparenttextures.com/patterns/twinkle-twinkle.png") repeat;
+  background-size: cover;
+  animation: twinkle 2s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes moveStars { from{background-position:0 0;} to{background-position:10000px 10000px;} }
+@keyframes twinkle { 0%,100%{opacity:0.5;} 50%{opacity:1;} }
+
+/* ------------------- */
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(0,200,255,0.5); border-radius:4px; }
+::-webkit-scrollbar-track { background: transparent; }
