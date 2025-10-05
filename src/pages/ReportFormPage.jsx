@@ -78,7 +78,7 @@ function ReportFormPage() {
    
          {/* Map */}
          <div className="glass-card p-6 relative z-10">
-           <h2 className="text-3xl font-exo font-semibold mb-6 text-center drop-shadow-lg">
+           <h2 className="text-3xl font-exo font-semibold mb-6 text-center drop-shadow-lg text-white">
              🌍 Field Reports Map
            </h2>
            <UserReportMap reports={reports} />
