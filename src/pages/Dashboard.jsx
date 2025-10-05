@@ -6,7 +6,7 @@ import { Sprout, Leaf, AlertTriangle } from "lucide-react";
 const Dashboard = () => {
   return (
     <div className="ml-60 p-8 space-y-6">
-      <h2 className="text-2xl font-bold text-gray-800">Dashboard</h2>
+      <h2 className="text-2xl font-bold text-white">Dashboard</h2>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <Card title="Total Plants" value="120" icon={Sprout} color="bg-green-500" />
